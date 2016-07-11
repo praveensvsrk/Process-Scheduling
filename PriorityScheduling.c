@@ -89,15 +89,13 @@ void wait(process *p){
 	p->waitTime++;
 }
 int main(){
-	int i,j,time, timeQuantum;
+	int i,j,time
 	process list[NUM];
 	processQueue queue;
 	int totalWaitTime=0;	
 	int totalBurstTime=0;
 	int timeProcessed=0;
 	printf("***Round Robin - preemptive scheduling***\n");
-	printf("Enter time quantum: ");
-	scanf("%d", &timeQuantum);
 	for(i=0; i<NUM; i++){	
 		printf("Enter Process %d Burst time: ", i);
 		scanf("%d", &list[i].burstTime);
